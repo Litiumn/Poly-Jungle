@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "sceneType": "3D Isometric Forest",
+    "cameraView": "isometric",
+    "gridSize": { "x": 100, "z": 100 }
+  },
+  "initialScene": {
+    "camera": {
+      "type": "OrthographicCamera",
+      "position": { "x": 30, "y": 40, "z": 30 },
+      "lookAt": { "x": 0, "y": 0, "z": 0 },
+      "zoom": 20,
+      "near": 0.1,
+      "far": 500
+    },
+    "lighting": {
+      "ambient": {
+        "type": "AmbientLight",
+        "color": "#ffffff",
+        "intensity": 0.6
+      },
+      "directional": {
+        "type": "DirectionalLight",
+        "color": "#ffeed0",
+        "intensity": 0.8,
+        "position": { "x": 50, "y": 80, "z": 50 },
+        "castShadow": true,
+        "shadowMapSize": 2048
+      }
+    },
+    "terrain": {
+      "patches": [
+        {
+          "id": "terrain_main",
+          "model": "terrain_patch.glb",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 10, "y": 1, "z": 10 },
+          "tiled": true
+        }
+      ]
+    },
+    "starterTrees": [
+      {
+        "id": "starter_oak_1",
+        "species": "Oak",
+        "position": { "x": -15, "y": 0, "z": -10 },
+        "plantedAt": null,
+        "growthStage": "seedling",
+        "rarityTier": "common"
+      },
+      {
+        "id": "starter_pine_1",
+        "species": "Pine",
+        "position": { "x": 10, "y": 0, "z": -15 },
+        "plantedAt": null,
+        "growthStage": "seedling",
+        "rarityTier": "common"
+      },
+      {
+        "id": "starter_oak_2",
+        "species": "Oak",
+        "position": { "x": -5, "y": 0, "z": 12 },
+        "plantedAt": null,
+        "growthStage": "young",
+        "rarityTier": "common"
+      },
+      {
+        "id": "starter_pine_2",
+        "species": "Pine",
+        "position": { "x": 18, "y": 0, "z": 8 },
+        "plantedAt": null,
+        "growthStage": "young",
+        "rarityTier": "common"
+      }
+    ],
+    "starterDecorations": [
+      {
+        "id": "deco_rock_1",
+        "type": "rock_small",
+        "position": { "x": -20, "y": 0, "z": 5 }
+      },
+      {
+        "id": "deco_fern_1",
+        "type": "bush_fern",
+        "position": { "x": 5, "y": 0, "z": -8 }
+      },
+      {
+        "id": "deco_flowers_1",
+        "type": "flower_patch",
+        "position": { "x": 12, "y": 0, "z": 15 }
+      }
+    ],
+    "spawnPoints": {
+      "trash": [
+        { "x": -12, "z": -5 },
+        { "x": 8, "z": 10 },
+        { "x": -18, "z": 12 },
+        { "x": 15, "z": -12 },
+        { "x": 0, "z": 0 }
+      ],
+      "weeds": [
+        { "x": -10, "z": -8 },
+        { "x": 6, "z": 8 },
+        { "x": -15, "z": 14 },
+        { "x": 12, "z": -10 },
+        { "x": -3, "z": 5 }
+      ],
+      "wildlife": {
+        "birds": [
+          { "x": -25, "y": 15, "z": -20 },
+          { "x": 20, "y": 18, "z": 15 }
+        ],
+        "butterflies": [
+          { "x": -8, "y": 3, "z": -5 },
+          { "x": 10, "y": 4, "z": 10 }
+        ]
+      }
+    }
+  },
+  "plantingGrid": {
+    "enabled": true,
+    "cellSize": 5,
+    "validPlantingAreas": [
+      { "x": -30, "z": -30, "width": 60, "depth": 60 }
+    ],
+    "exclusionZones": [
+      { "x": -5, "z": -5, "width": 10, "depth": 10, "reason": "Central clearing" }
+    ]
+  },
+  "interactionRules": {
+    "clickRadius": 2.0,
+    "hoverHighlight": true,
+    "multiSelect": false,
+    "dragToPlace": false
+  },
+  "weatherSystem": {
+    "default": "clear",
+    "options": ["clear", "rain", "night"],
+    "effects": {
+      "rain": {
+        "particleCount": 1000,
+        "growthBonus": 0.02
+      },
+      "night": {
+        "ambientIntensity": 0.3,
+        "directionalIntensity": 0.4
+      }
+    }
+  },
+  "backgroundLayers": [
+    {
+      "id": "sky_layer_1",
+      "type": "parallax",
+      "image": "sky_clouds.png",
+      "depth": 100,
+      "scrollSpeed": 0.5
+    },
+    {
+      "id": "sky_layer_2",
+      "type": "parallax",
+      "image": "sky_mountains.png",
+      "depth": 200,
+      "scrollSpeed": 0.2
+    }
+  ],
+  "cameraControls": {
+    "panEnabled": true,
+    "panSpeed": 0.5,
+    "zoomEnabled": true,
+    "zoomMin": 10,
+    "zoomMax": 50,
+    "rotateEnabled": false,
+    "bounds": {
+      "minX": -50,
+      "maxX": 50,
+      "minZ": -50,
+      "maxZ": 50
+    }
+  },
+  "performanceSettings": {
+    "maxConcurrentObjects": 30,
+    "frustumCulling": true,
+    "shadowsEnabled": true,
+    "LODEnabled": true,
+    "instancingEnabled": true
+  }
+}

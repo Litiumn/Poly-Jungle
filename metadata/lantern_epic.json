@@ -1,0 +1,55 @@
+{
+  "name": "Enchanted Lantern",
+  "description": "A mystical lantern that glows softly with an ethereal light, illuminating your forest at night. This epic decoration adds a magical ambiance to any EcoForest.",
+  "image": "ipfs://QmYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/lantern.glb",
+  "external_url": "https://ecoforest.base.app/decoration/lantern_epic",
+  "attributes": [
+    {
+      "trait_type": "Decoration Type",
+      "value": "Lighting"
+    },
+    {
+      "trait_type": "Rarity Tier",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Emissive",
+      "value": "Yes"
+    },
+    {
+      "trait_type": "Material",
+      "value": "Enchanted Bronze"
+    },
+    {
+      "trait_type": "Light Color",
+      "value": "Warm Amber"
+    },
+    {
+      "trait_type": "Height",
+      "value": "2.5 meters"
+    },
+    {
+      "trait_type": "Style",
+      "value": "Mystical"
+    },
+    {
+      "trait_type": "Environment Effect",
+      "value": "Night Glow"
+    }
+  ],
+  "properties": {
+    "category": "Decoration",
+    "subcategory": "Lighting",
+    "emissiveIntensity": 0.8,
+    "lightRadius": 10,
+    "animationType": "Subtle Flicker",
+    "energySource": "Magical"
+  },
+  "collection": {
+    "name": "EcoForest Base — Epic Decorations",
+    "family": "EcoForest Base",
+    "description": "A collection of rare and epic decorations from the EcoForest Base ecosystem."
+  },
+  "compiler": "EcoForest Minting Engine v1.0",
+  "date": 1699999999999
+}

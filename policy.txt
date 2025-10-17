@@ -1,0 +1,284 @@
+EcoForest Base — NFT Minting Policy
+
+========================================
+OVERVIEW
+========================================
+
+EcoForest Base implements a selective NFT minting policy designed to minimize friction for casual players while offering true digital ownership for rare, valuable items.
+
+NOT ALL ITEMS ARE MINTABLE.
+
+This policy balances gameplay accessibility with Web3 value creation.
+
+========================================
+CORE PRINCIPLES
+========================================
+
+1. COMMON ITEMS REMAIN OFF-CHAIN
+   - Basic trees (Oak, Pine) and common decorations (bushes, rocks, flowers) are NOT mintable.
+   - These items are purely in-game assets stored in localStorage.
+   - Purpose: Keep onboarding simple and free for new players.
+
+2. RARE+ ITEMS ARE MINTABLE
+   - Only items with rarity tier "Rare", "Epic", or "Legendary" can be minted as NFTs.
+   - Examples: Cherry trees (Rare), Ancient Baobab (Epic), Ancient Mangrove (Legendary).
+   - Purpose: Create scarcity and value for special achievements.
+
+3. MINTING IS OPTIONAL
+   - Players can choose whether to mint rare items or keep them off-chain.
+   - Off-chain items function identically in-game (no gameplay disadvantage).
+   - Purpose: Respect player preferences; not everyone wants NFTs.
+
+4. MINTING IS SIMULATED (PROTOTYPE)
+   - This prototype does NOT connect to a real blockchain.
+   - All minting operations are mocked in `mock_api.ts`.
+   - Purpose: Test UX flows without network dependency.
+
+========================================
+MINTABLE ITEM CATEGORIES
+========================================
+
+TREES:
+- Cherry Tree (Mature/Ancient) — Rare
+- Baobab Tree (Ancient) — Epic
+- Mangrove Tree (Ancient) — Legendary
+
+DECORATIONS:
+- Serene Pond — Rare
+- Enchanted Lantern — Epic
+- Rustic Forest Bench — Rare
+- Group Tree Marker — Rare
+
+NON-MINTABLE ITEMS:
+- Oak Tree — Common
+- Pine Tree — Common
+- Bush/Fern — Common
+- Flower Patch — Common
+- Rock (small) — Common
+- Log Decoration — Common
+- Mushroom Cluster — Common
+- Trash Objects — Common
+
+========================================
+MINTING PROCESS (MOCKED)
+========================================
+
+STEP 1: ACQUIRE ELIGIBLE ITEM
+- Player must own a rare+ item in their inventory.
+- Item must be in "mintable" state (e.g., tree reached maturity).
+
+STEP 2: INITIATE MINT
+- Open inventory panel.
+- Select rare+ item.
+- Click "Mint NFT" button.
+
+STEP 3: PREVIEW METADATA
+- Display NFT metadata:
+  - Name (e.g., "Ancient Baobab")
+  - Description
+  - Traits (species, growth stage, eco impact, rarity tier)
+  - Image reference (GLB model)
+- Show estimated mint cost (in mocked eco-points, not real gas).
+
+STEP 4: CONFIRM TRANSACTION
+- Simulate wallet signature request.
+- Player clicks "Confirm".
+- Mock transaction hash generated (e.g., "0xabc123...").
+
+STEP 5: MINT CONFIRMATION
+- Item marked as "minted" in localStorage.
+- Assigned to player's mock wallet address.
+- NFT metadata saved to `localStorage['mock_nfts']`.
+- Show success notification: "NFT minted successfully!"
+
+STEP 6: POST-MINT
+- Minted item remains usable in-game.
+- Appears in "NFT Inventory" section.
+- Can be "transferred" (mocked) to other mock addresses.
+
+========================================
+MOCK METADATA FORMAT
+========================================
+
+Each minted NFT generates metadata conforming to ERC-1155 standard (mocked):
+
+{
+  "tokenId": "uuid-generated",
+  "itemId": "mangrove_tree_ancient",
+  "owner": "0x0000000000000000000000000000000000000000",
+  "mintedAt": 1699999999999,
+  "metadata": {
+    "name": "Ancient Mangrove Guardian",
+    "description": "The rarest tree in EcoForest, an ancient Mangrove that has witnessed centuries.",
+    "image": "mangrove_tree.glb",
+    "attributes": [
+      { "trait_type": "Species", "value": "Mangrove" },
+      { "trait_type": "Growth Stage", "value": "Ancient" },
+      { "trait_type": "Eco Impact", "value": "80 kg CO₂" },
+      { "trait_type": "Rarity Tier", "value": "Legendary" }
+    ]
+  },
+  "txHash": "mock_0xabc123def456..."
+}
+
+========================================
+SUPPLY LIMITS
+========================================
+
+Each mintable item has a capped total supply to create scarcity:
+
+- Cherry Tree (Mature): 1,000 total supply
+- Ancient Baobab: 500 total supply
+- Ancient Mangrove: 100 total supply
+- Serene Pond: 800 total supply
+- Enchanted Lantern: 300 total supply
+- Rustic Bench: 600 total supply
+- Group Tree Marker: 500 total supply
+
+Minted count tracked in `nft_catalog.json`.
+
+In a real implementation:
+- Smart contract would enforce supply cap.
+- Minting would fail once cap reached.
+
+In this prototype:
+- Supply limits are cosmetic (not enforced).
+- Used for UI display only.
+
+========================================
+OWNERSHIP & TRANSFER
+========================================
+
+OWNERSHIP:
+- Each minted NFT is assigned to player's mock wallet address.
+- Stored in localStorage['mock_nfts'] under player's address.
+
+TRANSFER (MOCKED):
+- Players can simulate transferring NFTs to other mock addresses.
+- Transfer flow:
+  1. Select NFT from inventory.
+  2. Click "Transfer".
+  3. Enter recipient mock address.
+  4. Confirm.
+  5. Update owner field in localStorage.
+- No real blockchain transaction occurs.
+
+TRADING:
+- Not implemented in prototype.
+- Future: Integrate with Base DEX or marketplace.
+
+========================================
+ECONOMICS
+========================================
+
+MINT COST:
+- In prototype: Minting costs eco-points (in-game currency).
+- In real deployment: Would cost gas fees (ETH on Base).
+
+Suggested mint costs (prototype):
+- Rare: 100 eco-points
+- Epic: 250 eco-points
+- Legendary: 500 eco-points
+
+SECONDARY MARKET:
+- Not implemented.
+- Future: Allow trading on OpenSea or Base NFT marketplaces.
+
+ROYALTIES:
+- Not implemented.
+- Future: 5% creator royalty on secondary sales.
+
+========================================
+REAL DEPLOYMENT CONSIDERATIONS
+========================================
+
+When deploying to real Base blockchain:
+
+1. SMART CONTRACT:
+   - Deploy ERC-1155 contract on Base.
+   - Implement supply caps per token ID.
+   - Whitelist only rare+ items.
+
+2. METADATA STORAGE:
+   - Store metadata on IPFS.
+   - Pin to ensure availability.
+   - Update `metadataURI` to IPFS hash.
+
+3. WALLET INTEGRATION:
+   - Replace mock wallet with real Web3 provider (e.g., MetaMask, Coinbase Wallet).
+   - Use ethers.js or viem for contract interaction.
+
+4. GAS OPTIMIZATION:
+   - Batch mint multiple NFTs in one transaction.
+   - Use lazy minting for off-chain storage until first trade.
+
+5. SECURITY:
+   - Audit smart contract.
+   - Implement access controls (only EcoForest can mint).
+   - Prevent duplicate mints (check if item already minted).
+
+========================================
+RATIONALE
+========================================
+
+WHY NOT MINT EVERYTHING?
+
+1. USER EXPERIENCE:
+   - Onboarding friction: Requiring wallet + gas fees for common items would deter casual players.
+   - Simplicity: Most players just want to play, not manage NFTs.
+
+2. VALUE PRESERVATION:
+   - Scarcity: Minting only rare items preserves value.
+   - Exclusivity: NFT holders feel special and rewarded.
+
+3. SUSTAINABILITY:
+   - Gas costs: Minting millions of common trees would be expensive.
+   - Network load: Reduces blockchain congestion.
+
+4. FLEXIBILITY:
+   - Upgrade path: Players can decide later if they want NFTs.
+   - Hybrid model: Best of both worlds (free-to-play + Web3 ownership).
+
+========================================
+FREQUENTLY ASKED QUESTIONS
+========================================
+
+Q: Can I sell my Oak tree?
+A: No, common trees are not mintable and cannot be sold as NFTs. They remain in-game assets.
+
+Q: What happens if I mint a tree and then plant it?
+A: Minted items remain usable in-game. The NFT represents ownership but doesn't remove the item from your inventory.
+
+Q: Can I transfer NFTs to friends?
+A: Yes (mocked in prototype). In real deployment, you can transfer via wallet or marketplace.
+
+Q: Do I need to mint to play?
+A: No, minting is entirely optional. You can enjoy the full game without ever minting an NFT.
+
+Q: Will minting cost real money?
+A: In prototype: No, uses eco-points. In real deployment: Yes, gas fees on Base (typically very low, <$0.01).
+
+Q: Can I unmint an NFT?
+A: No, once minted, NFTs are permanent (blockchain immutability).
+
+Q: What if I lose my wallet?
+A: In prototype: Data is in localStorage, can be reset. In real deployment: NFTs would be lost unless you have wallet backup.
+
+========================================
+CONCLUSION
+========================================
+
+EcoForest Base's selective minting policy ensures:
+- Accessible gameplay for everyone.
+- Meaningful ownership for engaged players.
+- Sustainable economics.
+- Scalable Web3 integration.
+
+By keeping common items off-chain and rare items on-chain, we create a balanced ecosystem that respects player choice and maximizes value.
+
+For questions or suggestions, contact the EcoForest team.
+
+========================================
+VERSION: 1.0
+LAST UPDATED: 2025-10-12
+========================================

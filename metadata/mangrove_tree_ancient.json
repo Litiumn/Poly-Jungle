@@ -1,0 +1,60 @@
+{
+  "name": "Ancient Mangrove Guardian",
+  "description": "The rarest tree in EcoForest, an ancient Mangrove that has witnessed centuries of growth. This legendary tree represents the pinnacle of conservation and patience, sequestering 80kg of CO₂ annually.",
+  "image": "ipfs://QmXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/mangrove_tree.glb",
+  "external_url": "https://ecoforest.base.app/tree/mangrove_ancient",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Mangrove"
+    },
+    {
+      "trait_type": "Growth Stage",
+      "value": "Ancient"
+    },
+    {
+      "trait_type": "Eco Impact",
+      "value": "80 kg CO₂"
+    },
+    {
+      "trait_type": "Rarity Tier",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Age",
+      "value": "240+ hours"
+    },
+    {
+      "trait_type": "Environment",
+      "value": "Coastal Wetland"
+    },
+    {
+      "trait_type": "Root System",
+      "value": "Complex Aerial Roots"
+    },
+    {
+      "trait_type": "Planted By",
+      "value": "EcoForest Community"
+    },
+    {
+      "trait_type": "Planted On",
+      "value": "Base Network"
+    }
+  ],
+  "properties": {
+    "category": "Tree",
+    "subcategory": "Mangrove",
+    "growthDurationHours": 240,
+    "carbonSequestrationKg": 80,
+    "biodiversityScore": 95,
+    "waterDependency": "High",
+    "sunlightRequirement": "Full Sun"
+  },
+  "collection": {
+    "name": "EcoForest Base — Ancient Trees",
+    "family": "EcoForest Base",
+    "description": "A collection of rare and legendary trees from the EcoForest Base ecosystem."
+  },
+  "compiler": "EcoForest Minting Engine v1.0",
+  "date": 1699999999999
+}

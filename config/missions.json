@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "resetTime": "00:00 UTC",
+    "maxActiveMissions": 5
+  },
+  "inAppMissions": [
+    {
+      "id": "plant_first_tree",
+      "type": "tutorial",
+      "title": "Plant Your First Tree",
+      "description": "Start your EcoForest journey by planting your very first tree!",
+      "goal": {
+        "action": "plant_tree",
+        "target": 1
+      },
+      "reward": {
+        "ecoPoints": 25,
+        "items": ["oak_seed"],
+        "badge": "first_tree"
+      },
+      "repeatable": false,
+      "duration": null
+    },
+    {
+      "id": "water_warrior",
+      "type": "daily",
+      "title": "Water Warrior",
+      "description": "Water 5 trees in your forest to help them grow faster.",
+      "goal": {
+        "action": "water_tree",
+        "target": 5
+      },
+      "reward": {
+        "ecoPoints": 30,
+        "items": []
+      },
+      "repeatable": true,
+      "duration": "24h"
+    },
+    {
+      "id": "cleanup_crew",
+      "type": "daily",
+      "title": "Cleanup Crew",
+      "description": "Remove 10 pieces of trash to keep your forest pristine.",
+      "goal": {
+        "action": "clean_trash",
+        "target": 10
+      },
+      "reward": {
+        "ecoPoints": 40,
+        "items": ["flower_patch"]
+      },
+      "repeatable": true,
+      "duration": "24h"
+    },
+    {
+      "id": "weed_whacker",
+      "type": "daily",
+      "title": "Weed Whacker",
+      "description": "Clear 15 weeds to boost tree growth rates.",
+      "goal": {
+        "action": "remove_weed",
+        "target": 15
+      },
+      "reward": {
+        "ecoPoints": 35,
+        "items": []
+      },
+      "repeatable": true,
+      "duration": "24h"
+    },
+    {
+      "id": "tree_collector",
+      "type": "milestone",
+      "title": "Tree Collector",
+      "description": "Plant at least one tree of each species (Oak, Pine, Cherry, Baobab, Mangrove).",
+      "goal": {
+        "action": "plant_unique_species",
+        "target": 5
+      },
+      "reward": {
+        "ecoPoints": 100,
+        "items": ["bench", "lantern"],
+        "badge": "tree_collector"
+      },
+      "repeatable": false,
+      "duration": null
+    },
+    {
+      "id": "forest_builder",
+      "type": "milestone",
+      "title": "Forest Builder",
+      "description": "Grow your forest to 20 total trees.",
+      "goal": {
+        "action": "total_trees_planted",
+        "target": 20
+      },
+      "reward": {
+        "ecoPoints": 150,
+        "items": ["pond_tile"],
+        "badge": "forest_builder"
+      },
+      "repeatable": false,
+      "duration": null
+    },
+    {
+      "id": "ancient_grove",
+      "type": "milestone",
+      "title": "Ancient Grove",
+      "description": "Have 3 trees reach Ancient growth stage.",
+      "goal": {
+        "action": "ancient_trees",
+        "target": 3
+      },
+      "reward": {
+        "ecoPoints": 200,
+        "items": ["baobab_seed"],
+        "badge": "ancient_grove"
+      },
+      "repeatable": false,
+      "duration": null
+    },
+    {
+      "id": "seven_day_streak",
+      "type": "streak",
+      "title": "7-Day Streak",
+      "description": "Log in and complete at least one action for 7 consecutive days.",
+      "goal": {
+        "action": "login_streak",
+        "target": 7
+      },
+      "reward": {
+        "ecoPoints": 100,
+        "items": ["cherry_seed"],
+        "badge": "seven_day_streak"
+      },
+      "repeatable": true,
+      "duration": null
+    },
+    {
+      "id": "community_helper",
+      "type": "social",
+      "title": "Community Helper",
+      "description": "Visit and rate 5 different EcoForests.",
+      "goal": {
+        "action": "visit_forests",
+        "target": 5
+      },
+      "reward": {
+        "ecoPoints": 50,
+        "items": ["mushroom_cluster"]
+      },
+      "repeatable": true,
+      "duration": "7d"
+    },
+    {
+      "id": "group_gardener",
+      "type": "cooperative",
+      "title": "Group Gardener",
+      "description": "Contribute to planting a group tree with friends.",
+      "goal": {
+        "action": "plant_group_tree",
+        "target": 1
+      },
+      "reward": {
+        "ecoPoints": 75,
+        "items": ["group_root_marker"]
+      },
+      "repeatable": true,
+      "duration": null
+    }
+  ],
+  "baseMissions": [
+    {
+      "id": "base_welcome",
+      "type": "ecosystem",
+      "title": "Welcome to Base",
+      "description": "Connect your wallet and join the Base ecosystem.",
+      "goal": {
+        "action": "connect_wallet",
+        "target": 1,
+        "external": true
+      },
+      "reward": {
+        "ecoPoints": 50,
+        "items": ["oak_seed", "pine_seed"]
+      },
+      "repeatable": false,
+      "duration": null,
+      "mockTrigger": "wallet_connect"
+    },
+    {
+      "id": "base_share",
+      "type": "ecosystem",
+      "title": "Share on Base",
+      "description": "Share your EcoForest progress on Base social channels.",
+      "goal": {
+        "action": "share_on_base",
+        "target": 1,
+        "external": true
+      },
+      "reward": {
+        "ecoPoints": 30,
+        "items": []
+      },
+      "repeatable": true,
+      "duration": "7d",
+      "mockTrigger": "social_share"
+    },
+    {
+      "id": "base_trade",
+      "type": "ecosystem",
+      "title": "Trade in Base",
+      "description": "Complete a trade or swap in the Base ecosystem.",
+      "goal": {
+        "action": "base_trade",
+        "target": 1,
+        "external": true
+      },
+      "reward": {
+        "ecoPoints": 60,
+        "items": ["mangrove_seed"]
+      },
+      "repeatable": true,
+      "duration": "7d",
+      "mockTrigger": "external_trade"
+    },
+    {
+      "id": "base_builder",
+      "type": "ecosystem",
+      "title": "Base Builder",
+      "description": "Deploy or interact with a dApp on Base.",
+      "goal": {
+        "action": "base_dapp_interact",
+        "target": 1,
+        "external": true
+      },
+      "reward": {
+        "ecoPoints": 80,
+        "items": ["log_deco"],
+        "badge": "base_builder"
+      },
+      "repeatable": false,
+      "duration": null,
+      "mockTrigger": "dapp_interaction"
+    },
+    {
+      "id": "base_community",
+      "type": "ecosystem",
+      "title": "Join Base Community",
+      "description": "Join the Base community Discord or forum.",
+      "goal": {
+        "action": "join_community",
+        "target": 1,
+        "external": true
+      },
+      "reward": {
+        "ecoPoints": 40,
+        "items": []
+      },
+      "repeatable": false,
+      "duration": null,
+      "mockTrigger": "community_join"
+    }
+  ],
+  "missionProgressTracking": {
+    "storageKey": "ecoforest_mission_progress",
+    "fields": ["missionId", "currentProgress", "claimed", "startedAt", "completedAt"]
+  },
+  "dailyResetLogic": {
+    "checkTime": "00:00 UTC",
+    "resetTypes": ["daily"],
+    "preserveProgress": false
+  }
+}

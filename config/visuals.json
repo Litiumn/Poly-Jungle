@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "totalAssets": 23,
+    "targetBundleSize": "< 20MB",
+    "renderEngine": "React Three Fiber + Three.js",
+    "compressionFormat": "Draco/glTF"
+  },
+  "assets": {
+    "trees": [
+      {
+        "id": "oak_tree",
+        "filename": "oak_tree.glb",
+        "category": "tree",
+        "species": "Oak",
+        "triBudget": 450,
+        "textureSize": "256x256",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 30, "tris": 450 },
+          "medium": { "distance": 60, "tris": 225 },
+          "low": { "distance": 100, "tris": 50, "fallback": "billboard" }
+        },
+        "loadPriority": "immediate",
+        "growthStages": {
+          "seedling": { "scale": 0.3, "model": "oak_tree.glb" },
+          "young": { "scale": 0.6, "model": "oak_tree.glb" },
+          "mature": { "scale": 1.0, "model": "oak_tree.glb" },
+          "ancient": { "scale": 1.2, "model": "oak_tree.glb" }
+        }
+      },
+      {
+        "id": "pine_tree",
+        "filename": "pine_tree.glb",
+        "category": "tree",
+        "species": "Pine",
+        "triBudget": 420,
+        "textureSize": "256x256",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 30, "tris": 420 },
+          "medium": { "distance": 60, "tris": 210 },
+          "low": { "distance": 100, "tris": 45, "fallback": "billboard" }
+        },
+        "loadPriority": "immediate",
+        "growthStages": {
+          "seedling": { "scale": 0.3, "model": "pine_tree.glb" },
+          "young": { "scale": 0.6, "model": "pine_tree.glb" },
+          "mature": { "scale": 1.0, "model": "pine_tree.glb" },
+          "ancient": { "scale": 1.2, "model": "pine_tree.glb" }
+        }
+      },
+      {
+        "id": "cherry_tree",
+        "filename": "cherry_tree.glb",
+        "category": "tree",
+        "species": "Cherry",
+        "triBudget": 480,
+        "textureSize": "256x256",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 30, "tris": 480 },
+          "medium": { "distance": 60, "tris": 240 },
+          "low": { "distance": 100, "tris": 55, "fallback": "billboard" }
+        },
+        "loadPriority": "deferred",
+        "growthStages": {
+          "seedling": { "scale": 0.3, "model": "cherry_tree.glb" },
+          "young": { "scale": 0.6, "model": "cherry_tree.glb" },
+          "mature": { "scale": 1.0, "model": "cherry_tree.glb" },
+          "ancient": { "scale": 1.3, "model": "cherry_tree.glb" }
+        }
+      },
+      {
+        "id": "baobab_tree",
+        "filename": "baobab_tree.glb",
+        "category": "tree",
+        "species": "Baobab",
+        "triBudget": 500,
+        "textureSize": "256x256",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 30, "tris": 500 },
+          "medium": { "distance": 60, "tris": 250 },
+          "low": { "distance": 100, "tris": 60, "fallback": "billboard" }
+        },
+        "loadPriority": "deferred",
+        "growthStages": {
+          "seedling": { "scale": 0.3, "model": "baobab_tree.glb" },
+          "young": { "scale": 0.7, "model": "baobab_tree.glb" },
+          "mature": { "scale": 1.0, "model": "baobab_tree.glb" },
+          "ancient": { "scale": 1.4, "model": "baobab_tree.glb" }
+        }
+      },
+      {
+        "id": "mangrove_tree",
+        "filename": "mangrove_tree.glb",
+        "category": "tree",
+        "species": "Mangrove",
+        "triBudget": 490,
+        "textureSize": "256x256",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 30, "tris": 490 },
+          "medium": { "distance": 60, "tris": 245 },
+          "low": { "distance": 100, "tris": 58, "fallback": "billboard" }
+        },
+        "loadPriority": "deferred",
+        "growthStages": {
+          "seedling": { "scale": 0.4, "model": "mangrove_tree.glb" },
+          "young": { "scale": 0.7, "model": "mangrove_tree.glb" },
+          "mature": { "scale": 1.0, "model": "mangrove_tree.glb" },
+          "ancient": { "scale": 1.3, "model": "mangrove_tree.glb" }
+        }
+      }
+    ],
+    "decorations": [
+      {
+        "id": "bush_fern",
+        "filename": "bush_fern.glb",
+        "category": "decoration",
+        "triBudget": 250,
+        "textureSize": "128x128",
+        "materialType": "MeshBasicMaterial",
+        "LOD": {
+          "high": { "distance": 40, "tris": 250 },
+          "low": { "distance": 80, "tris": 80 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "flower_patch",
+        "filename": "flower_patch.glb",
+        "category": "decoration",
+        "triBudget": 280,
+        "textureSize": "128x128",
+        "materialType": "MeshBasicMaterial",
+        "LOD": {
+          "high": { "distance": 40, "tris": 280 },
+          "low": { "distance": 80, "tris": 90 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "rock_small",
+        "filename": "rock_small.glb",
+        "category": "decoration",
+        "triBudget": 180,
+        "textureSize": "128x128",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 40, "tris": 180 },
+          "low": { "distance": 80, "tris": 60 }
+        },
+        "loadPriority": "immediate"
+      },
+      {
+        "id": "log_deco",
+        "filename": "log_deco.glb",
+        "category": "decoration",
+        "triBudget": 240,
+        "textureSize": "128x128",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 40, "tris": 240 },
+          "low": { "distance": 80, "tris": 75 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "bench",
+        "filename": "bench.glb",
+        "category": "decoration",
+        "triBudget": 300,
+        "textureSize": "128x128",
+        "materialType": "MeshStandardMaterial",
+        "LOD": {
+          "high": { "distance": 40, "tris": 300 },
+          "low": { "distance": 80, "tris": 100 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "pond_tile",
+        "filename": "pond_tile.glb",
+        "category": "decoration",
+        "triBudget": 380,
+        "textureSize": "256x256",
+        "materialType": "MeshStandardMaterial",
+        "reflectionBaked": true,
+        "LOD": {
+          "high": { "distance": 40, "tris": 380 },
+          "low": { "distance": 80, "tris": 120 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "lantern",
+        "filename": "lantern.glb",
+        "category": "decoration",
+        "triBudget": 190,
+        "textureSize": "128x128",
+        "materialType": "MeshStandardMaterial",
+        "emissive": true,
+        "LOD": {
+          "high": { "distance": 40, "tris": 190 },
+          "low": { "distance": 80, "tris": 65 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "mushroom_cluster",
+        "filename": "mushroom_cluster.glb",
+        "category": "decoration",
+        "triBudget": 200,
+        "textureSize": "128x128",
+        "materialType": "MeshBasicMaterial",
+        "LOD": {
+          "high": { "distance": 40, "tris": 200 },
+          "low": { "distance": 80, "tris": 70 }
+        },
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "trash_obj",
+        "filename": "trash_obj.glb",
+        "category": "interactive",
+        "triBudget": 80,
+        "textureSize": "64x64",
+        "materialType": "MeshBasicMaterial",
+        "instanced": true,
+        "maxInstances": 10,
+        "loadPriority": "immediate"
+      }
+    ],
+    "terrain": [
+      {
+        "id": "terrain_patch",
+        "filename": "terrain_patch.glb",
+        "category": "terrain",
+        "triBudget": 800,
+        "textureSize": "512x512",
+        "materialType": "MeshStandardMaterial",
+        "tiled": true,
+        "tileSize": { "x": 10, "z": 10 },
+        "loadPriority": "immediate"
+      },
+      {
+        "id": "group_root_marker",
+        "filename": "group_root_marker.glb",
+        "category": "marker",
+        "triBudget": 150,
+        "textureSize": "128x128",
+        "materialType": "MeshBasicMaterial",
+        "animated": true,
+        "animation": "glow_pulse",
+        "loadPriority": "deferred"
+      }
+    ],
+    "particles": [
+      {
+        "id": "particle_birds",
+        "filename": "particle_birds.png",
+        "category": "particle",
+        "type": "sprite",
+        "textureSize": "64x64",
+        "frames": 4,
+        "maxParticles": 8,
+        "loadPriority": "deferred"
+      },
+      {
+        "id": "particle_butterflies",
+        "filename": "particle_butterflies.png",
+        "category": "particle",
+        "type": "sprite",
+        "textureSize": "64x64",
+        "frames": 4,
+        "maxParticles": 6,
+        "loadPriority": "deferred"
+      }
+    ],
+    "skybox": [
+      {
+        "id": "sky_parallax_layer_1",
+        "filename": "sky_clouds.png",
+        "category": "background",
+        "type": "parallax",
+        "textureSize": "1024x512",
+        "scrollSpeed": 0.5,
+        "depth": 100,
+        "loadPriority": "immediate"
+      },
+      {
+        "id": "sky_parallax_layer_2",
+        "filename": "sky_mountains.png",
+        "category": "background",
+        "type": "parallax",
+        "textureSize": "2048x512",
+        "scrollSpeed": 0.2,
+        "depth": 200,
+        "loadPriority": "immediate"
+      }
+    ],
+    "ui": [
+      {
+        "id": "ui_buttons_atlas",
+        "filename": "ui_buttons_atlas.png",
+        "category": "ui",
+        "textureSize": "512x256",
+        "sprites": ["plant_btn", "water_btn", "clean_btn", "visit_btn", "missions_btn"],
+        "loadPriority": "immediate"
+      },
+      {
+        "id": "ui_icons_atlas",
+        "filename": "ui_icons_atlas.png",
+        "category": "ui",
+        "textureSize": "256x256",
+        "sprites": ["eco_point_icon", "tree_icon", "heart_icon", "star_icon", "group_icon"],
+        "loadPriority": "immediate"
+      },
+      {
+        "id": "seed_inventory_icons",
+        "filename": "seed_icons.png",
+        "category": "ui",
+        "textureSize": "256x128",
+        "sprites": ["oak_seed", "pine_seed", "cherry_seed", "baobab_seed", "mangrove_seed"],
+        "loadPriority": "immediate"
+      }
+    ]
+  },
+  "loadingStrategy": {
+    "immediate": ["terrain_patch", "oak_tree", "pine_tree", "rock_small", "trash_obj", "sky_parallax_layer_1", "sky_parallax_layer_2", "ui_buttons_atlas", "ui_icons_atlas", "seed_inventory_icons"],
+    "deferred": ["cherry_tree", "baobab_tree", "mangrove_tree", "bush_fern", "flower_patch", "log_deco", "bench", "pond_tile", "lantern", "mushroom_cluster", "group_root_marker", "particle_birds", "particle_butterflies"]
+  },
+  "performanceNotes": {
+    "instancing": "Use InstancedMesh for trash_obj (up to 10 instances)",
+    "LOD": "Implement distance-based LOD switching at 30/60/100 units",
+    "culling": "Enable frustum culling for all meshes",
+    "compression": "Apply Draco compression to all .glb files",
+    "lazyLoad": "Defer non-essential decorations until user adds them"
+  }
+}

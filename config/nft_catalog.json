@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "standard": "ERC-1155 (mocked)",
+    "mintingPolicy": "Only rare, epic, and legendary items are mintable. Common items remain off-chain to reduce friction.",
+    "network": "Base (mocked)",
+    "contractAddress": "0x0000000000000000000000000000000000000000"
+  },
+  "mintableItems": [
+    {
+      "id": "cherry_tree_mature",
+      "name": "Cherry Blossom Tree",
+      "rarity": "rare",
+      "category": "tree",
+      "description": "A beautiful cherry tree in full bloom, rare in EcoForest.",
+      "mintPrice": 100,
+      "totalSupply": 1000,
+      "currentMinted": 247,
+      "traits": {
+        "species": "Cherry",
+        "growthStage": "Mature",
+        "ecoImpactKgCO2": 20,
+        "rarityTier": "Rare"
+      },
+      "imageReference": "cherry_tree.glb",
+      "metadataURI": "/metadata/cherry_tree_mature.json"
+    },
+    {
+      "id": "baobab_tree_ancient",
+      "name": "Ancient Baobab",
+      "rarity": "epic",
+      "category": "tree",
+      "description": "A legendary ancient Baobab tree, towering symbol of endurance and wisdom.",
+      "mintPrice": 250,
+      "totalSupply": 500,
+      "currentMinted": 123,
+      "traits": {
+        "species": "Baobab",
+        "growthStage": "Ancient",
+        "ecoImpactKgCO2": 50,
+        "rarityTier": "Epic"
+      },
+      "imageReference": "baobab_tree.glb",
+      "metadataURI": "/metadata/baobab_tree_ancient.json"
+    },
+    {
+      "id": "mangrove_tree_ancient",
+      "name": "Ancient Mangrove Guardian",
+      "rarity": "legendary",
+      "category": "tree",
+      "description": "The rarest tree in EcoForest, an ancient Mangrove that has witnessed centuries.",
+      "mintPrice": 500,
+      "totalSupply": 100,
+      "currentMinted": 34,
+      "traits": {
+        "species": "Mangrove",
+        "growthStage": "Ancient",
+        "ecoImpactKgCO2": 80,
+        "rarityTier": "Legendary"
+      },
+      "imageReference": "mangrove_tree.glb",
+      "metadataURI": "/metadata/mangrove_tree_ancient.json"
+    },
+    {
+      "id": "pond_tile_rare",
+      "name": "Serene Pond",
+      "rarity": "rare",
+      "category": "decoration",
+      "description": "A tranquil pond that reflects the beauty of your forest.",
+      "mintPrice": 80,
+      "totalSupply": 800,
+      "currentMinted": 312,
+      "traits": {
+        "decorationType": "Water Feature",
+        "size": "Medium",
+        "rarityTier": "Rare"
+      },
+      "imageReference": "pond_tile.glb",
+      "metadataURI": "/metadata/pond_tile_rare.json"
+    },
+    {
+      "id": "lantern_epic",
+      "name": "Enchanted Lantern",
+      "rarity": "epic",
+      "category": "decoration",
+      "description": "A mystical lantern that glows softly, illuminating your forest at night.",
+      "mintPrice": 150,
+      "totalSupply": 300,
+      "currentMinted": 89,
+      "traits": {
+        "decorationType": "Lighting",
+        "emissive": true,
+        "rarityTier": "Epic"
+      },
+      "imageReference": "lantern.glb",
+      "metadataURI": "/metadata/lantern_epic.json"
+    },
+    {
+      "id": "group_root_marker_rare",
+      "name": "Group Tree Marker",
+      "rarity": "rare",
+      "category": "marker",
+      "description": "A glowing marker indicating a cooperatively planted group tree.",
+      "mintPrice": 120,
+      "totalSupply": 500,
+      "currentMinted": 156,
+      "traits": {
+        "decorationType": "Marker",
+        "cooperative": true,
+        "animated": true,
+        "rarityTier": "Rare"
+      },
+      "imageReference": "group_root_marker.glb",
+      "metadataURI": "/metadata/group_root_marker_rare.json"
+    },
+    {
+      "id": "bench_rare",
+      "name": "Rustic Forest Bench",
+      "rarity": "rare",
+      "category": "decoration",
+      "description": "A cozy bench where visitors can rest and admire your forest.",
+      "mintPrice": 90,
+      "totalSupply": 600,
+      "currentMinted": 201,
+      "traits": {
+        "decorationType": "Furniture",
+        "interactable": true,
+        "rarityTier": "Rare"
+      },
+      "imageReference": "bench.glb",
+      "metadataURI": "/metadata/bench_rare.json"
+    }
+  ],
+  "rarityScoring": {
+    "common": 0,
+    "rare": 10,
+    "epic": 25,
+    "legendary": 50
+  },
+  "mintingProcess": {
+    "steps": [
+      "Select mintable item from inventory",
+      "Preview metadata and traits",
+      "Click 'Mint NFT' button",
+      "Simulate wallet signature request",
+      "Confirm transaction",
+      "Item marked as minted in localStorage['mock_nfts']",
+      "Assigned to mock wallet address"
+    ],
+    "validation": "Items must be owned and meet rarity threshold (rare+)"
+  },
+  "offChainItems": {
+    "note": "Common trees (Oak, Pine) and basic decorations (bush_fern, flower_patch, rock_small, log_deco, mushroom_cluster, trash_obj) remain off-chain and cannot be minted as NFTs."
+  }
+}

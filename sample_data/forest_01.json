@@ -1,0 +1,85 @@
+{
+  "userId": "forest_01",
+  "username": "ForestMaster",
+  "wallet": {
+    "address": "0x1234567890123456789012345678901234567890",
+    "connected": true
+  },
+  "ecoPoints": 2450,
+  "trees": [
+    {
+      "id": "tree_01_001",
+      "species": "Oak",
+      "position": { "x": -15, "y": 0, "z": -10 },
+      "plantedAt": 1697731200000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699900000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 15
+    },
+    {
+      "id": "tree_01_002",
+      "species": "Pine",
+      "position": { "x": 10, "y": 0, "z": -15 },
+      "plantedAt": 1697817600000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699900000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 12
+    },
+    {
+      "id": "tree_01_003",
+      "species": "Cherry",
+      "position": { "x": -5, "y": 0, "z": 12 },
+      "plantedAt": 1697990400000,
+      "growthStage": "mature",
+      "wateredToday": false,
+      "lastWatered": 1699900000000,
+      "rarityTier": "rare",
+      "ecoImpactKgCO2": 20
+    },
+    {
+      "id": "tree_01_004",
+      "species": "Baobab",
+      "position": { "x": 18, "y": 0, "z": 8 },
+      "plantedAt": 1696694400000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699900000000,
+      "rarityTier": "epic",
+      "ecoImpactKgCO2": 50
+    },
+    {
+      "id": "tree_01_005",
+      "species": "Mangrove",
+      "position": { "x": -20, "y": 0, "z": 5 },
+      "plantedAt": 1694188800000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699900000000,
+      "rarityTier": "legendary",
+      "ecoImpactKgCO2": 80
+    }
+  ],
+  "decorations": [
+    { "id": "deco_01_001", "type": "pond_tile", "position": { "x": 0, "y": 0, "z": 0 }, "rarityTier": "rare" },
+    { "id": "deco_01_002", "type": "bench", "position": { "x": -8, "y": 0, "z": -8 }, "rarityTier": "rare" },
+    { "id": "deco_01_003", "type": "lantern", "position": { "x": 12, "y": 0, "z": 15 }, "rarityTier": "epic" },
+    { "id": "deco_01_004", "type": "bush_fern", "position": { "x": 5, "y": 0, "z": -12 }, "rarityTier": "common" },
+    { "id": "deco_01_005", "type": "flower_patch", "position": { "x": -12, "y": 0, "z": 10 }, "rarityTier": "common" }
+  ],
+  "visitCount": 127,
+  "stats": {
+    "totalTreesPlanted": 12,
+    "totalTrashCleaned": 89,
+    "totalTreesWatered": 156,
+    "totalHeartsReceived": 34
+  },
+  "badges": ["first_tree", "seven_day_streak", "tree_collector", "forest_builder", "ancient_grove"],
+  "streak": {
+    "count": 23,
+    "lastLogin": 1699900000000
+  }
+}

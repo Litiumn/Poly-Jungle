@@ -1,0 +1,73 @@
+{
+  "userId": "forest_02",
+  "username": "TreeLover42",
+  "wallet": {
+    "address": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcd",
+    "connected": true
+  },
+  "ecoPoints": 1890,
+  "trees": [
+    {
+      "id": "tree_02_001",
+      "species": "Oak",
+      "position": { "x": -10, "y": 0, "z": -15 },
+      "plantedAt": 1698768000000,
+      "growthStage": "mature",
+      "wateredToday": false,
+      "lastWatered": 1699800000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 15
+    },
+    {
+      "id": "tree_02_002",
+      "species": "Pine",
+      "position": { "x": 12, "y": 0, "z": -10 },
+      "plantedAt": 1698854400000,
+      "growthStage": "mature",
+      "wateredToday": false,
+      "lastWatered": 1699800000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 12
+    },
+    {
+      "id": "tree_02_003",
+      "species": "Cherry",
+      "position": { "x": -8, "y": 0, "z": 8 },
+      "plantedAt": 1698249600000,
+      "growthStage": "mature",
+      "wateredToday": false,
+      "lastWatered": 1699800000000,
+      "rarityTier": "rare",
+      "ecoImpactKgCO2": 20
+    },
+    {
+      "id": "tree_02_004",
+      "species": "Baobab",
+      "position": { "x": 15, "y": 0, "z": 12 },
+      "plantedAt": 1697126400000,
+      "growthStage": "mature",
+      "wateredToday": false,
+      "lastWatered": 1699800000000,
+      "rarityTier": "epic",
+      "ecoImpactKgCO2": 50
+    }
+  ],
+  "decorations": [
+    { "id": "deco_02_001", "type": "rock_small", "position": { "x": -5, "y": 0, "z": -5 }, "rarityTier": "common" },
+    { "id": "deco_02_002", "type": "bush_fern", "position": { "x": 8, "y": 0, "z": -8 }, "rarityTier": "common" },
+    { "id": "deco_02_003", "type": "flower_patch", "position": { "x": -15, "y": 0, "z": 10 }, "rarityTier": "common" },
+    { "id": "deco_02_004", "type": "bench", "position": { "x": 0, "y": 0, "z": 5 }, "rarityTier": "rare" }
+  ],
+  "visitCount": 89,
+  "stats": {
+    "totalTreesPlanted": 8,
+    "totalTrashCleaned": 67,
+    "totalTreesWatered": 102,
+    "totalHeartsReceived": 22
+  },
+  "badges": ["first_tree", "seven_day_streak", "tree_collector"],
+  "streak": {
+    "count": 14,
+    "lastLogin": 1699850000000
+  }
+}

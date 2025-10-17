@@ -1,0 +1,106 @@
+{
+  "userId": "forest_03",
+  "username": "EcoWarrior",
+  "wallet": {
+    "address": "0x9999888877776666555544443333222211110000",
+    "connected": true
+  },
+  "ecoPoints": 3200,
+  "trees": [
+    {
+      "id": "tree_03_001",
+      "species": "Oak",
+      "position": { "x": -12, "y": 0, "z": -12 },
+      "plantedAt": 1697472000000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 15
+    },
+    {
+      "id": "tree_03_002",
+      "species": "Oak",
+      "position": { "x": 8, "y": 0, "z": -18 },
+      "plantedAt": 1697558400000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 15
+    },
+    {
+      "id": "tree_03_003",
+      "species": "Pine",
+      "position": { "x": -6, "y": 0, "z": 10 },
+      "plantedAt": 1697644800000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 12
+    },
+    {
+      "id": "tree_03_004",
+      "species": "Pine",
+      "position": { "x": 14, "y": 0, "z": 6 },
+      "plantedAt": 1697731200000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "common",
+      "ecoImpactKgCO2": 12
+    },
+    {
+      "id": "tree_03_005",
+      "species": "Cherry",
+      "position": { "x": -18, "y": 0, "z": 2 },
+      "plantedAt": 1696867200000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "rare",
+      "ecoImpactKgCO2": 20
+    },
+    {
+      "id": "tree_03_006",
+      "species": "Cherry",
+      "position": { "x": 20, "y": 0, "z": -5 },
+      "plantedAt": 1696953600000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "rare",
+      "ecoImpactKgCO2": 20
+    },
+    {
+      "id": "tree_03_007",
+      "species": "Mangrove",
+      "position": { "x": 0, "y": 0, "z": 0 },
+      "plantedAt": 1693497600000,
+      "growthStage": "ancient",
+      "wateredToday": false,
+      "lastWatered": 1699920000000,
+      "rarityTier": "legendary",
+      "ecoImpactKgCO2": 80
+    }
+  ],
+  "decorations": [
+    { "id": "deco_03_001", "type": "lantern", "position": { "x": -10, "y": 0, "z": -8 }, "rarityTier": "epic" },
+    { "id": "deco_03_002", "type": "pond_tile", "position": { "x": 5, "y": 0, "z": 5 }, "rarityTier": "rare" },
+    { "id": "deco_03_003", "type": "bench", "position": { "x": -15, "y": 0, "z": 12 }, "rarityTier": "rare" },
+    { "id": "deco_03_004", "type": "mushroom_cluster", "position": { "x": 10, "y": 0, "z": -12 }, "rarityTier": "common" }
+  ],
+  "visitCount": 156,
+  "stats": {
+    "totalTreesPlanted": 18,
+    "totalTrashCleaned": 145,
+    "totalTreesWatered": 234,
+    "totalHeartsReceived": 67
+  },
+  "badges": ["first_tree", "seven_day_streak", "tree_collector", "forest_builder", "ancient_grove", "cleanup_hero", "water_master", "community_star"],
+  "streak": {
+    "count": 31,
+    "lastLogin": 1699920000000
+  }
+}
